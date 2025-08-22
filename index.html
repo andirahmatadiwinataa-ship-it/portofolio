@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rahmat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    gridTemplateColumns: {
+                        auto: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="overflow-x-hidden font-Outfit">
+
+    <!-- Navbar -->
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between bg-white z-50">
+        <img src="./images/logo2.png" alt="logo2" class="w-28 cursor-pointer mr-14">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+            <li><a href="#top" class="hover:font-semibold">Home</a></li>
+            <li><a href="#about" class="hover:font-semibold">About me</a></li>
+            <li><a href="#service" class="hover:font-semibold">Service</a></li>
+            <li><a href="#my project" class="hover:font-semibold">My Projects</a></li>
+            <li><a href="#contact" class="hover:font-semibold">Contact me</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+            <!-- <button><img src="./images/moon icon.png" alt="" class="w-5"></button> -->
+            <a href="#contact"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border hover:bg-[#7FFF00] rounded-full ml-4">
+                Contact
+                <img src="./images/kanan.png" alt="" class="w-3">
+            </a>
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="./images/menu.png" alt="" class="w-6">
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="sideMenu"
+            class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+            <button onclick="closeMenu()" class="absolute top-4 right-4">
+                <img src="./images/close.png" alt="Close" class="w-6">
+            </button>
+            <ul class="flex flex-col items-start p-6 gap-6 mt-10">
+                <li><a href="#top" class="hover:font-semibold" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" class="hover:font-semibold" onclick="closeMenu()">About me</a></li>
+                <li><a href="#service" class="hover:font-semibold" onclick="closeMenu()">Service</a></li>
+                <li><a href="#my-project" class="hover:font-semibold" onclick="closeMenu()">My Projects</a></li>
+                <li><a href="#contact" class="hover:font-semibold" onclick="closeMenu()">Contact me</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+
+
+
+    <!-- Header Section -->
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-32">
+        <img src="./images/mat.png" alt="" class="rounded-full w-32">
+        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
+            Hi! I'm Rahmat
+            <img src="./images/hand icon.png" alt="" class="w-6 inline">
+        </h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">Frontend Web Developer</h1>
+        <p class="max-w-2xl mx-auto">
+            I am a frontend developer from Indonesia, with 1 year of experience in study.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="#contact"
+                class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#f037d4] to-[#da7d20] flex items-center gap-2">
+                Contact me
+                <img src="./images/arrow.png" alt="" class="w-4">
+            </a>
+            <a href="./file/my-resume.pdf" download="Rahmat-Resume.pdf"
+                class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white hover:bg-gray-100 transition">
+                My Resume
+                <img src="./images/download.png" alt="" class="w-4">
+            </a>
+        </div>
+    </div>
+
+    <!-- about me -->
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg">Introduction</h4>
+        <h2 class="text-center text-5xl">About me</h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative">
+                <img src="./images/ger.jpeg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
+                <!-- 
+                <div
+                    class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                    <img src="./images/github.png" alt="" class="w-full">
+
+                </div> -->
+            </div>
+            <div class="flex-1">
+                <p class="mb-6 max-w-2xl">
+                    I’m Rahmat, a student college with a strong interest in web development and software
+                    engineering.
+                    I enjoy building projects that combine clean design with practical functionality, whether it’s a
+                    simple
+                    personal website or a more structured application for my coursework. My curiosity about how
+                    technology
+                    works pushed me to learn coding, and over time it became a real passion — not just a skill to study.
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border border-gray-400 rounded-xl p-6 cursor-pointer 
+             hover:-translate-y-1 hover:shadow-[4px_4px_0_#000] 
+             duration-500">
+                        <img src="./images/code-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+                        <p class="text-gray-600 text-sm">HTML, CSS, JavaScript, Java</p>
+                    </li>
+
+                    <li class="border border-gray-400 rounded-xl p-6 cursor-pointer 
+             hover:-translate-y-1 hover:shadow-[4px_4px_0_#000] 
+             duration-500">
+                        <img src="./images/edu-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+                        <p class="text-gray-600 text-sm">
+                            Bachelor Of Information Technology (B.IT)
+                        </p>
+                    </li>
+
+                    <li class="border border-gray-400 rounded-xl p-6 cursor-pointer 
+             hover:-translate-y-1 hover:shadow-[4px_4px_0_#000] 
+             duration-500">
+                        <img src="./images/project.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+                        <p class="text-gray-600 text-sm">Built more than 3 projects</p>
+                    </li>
+                </ul>
+                <h4 class="my-6 text-gray-700">Tools i use</h4>
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border- gray-400 rounded-lg-cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border- gray-400 rounded-lg-cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/html.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border- gray-400 rounded-lg-cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/css.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border- gray-400 rounded-lg-cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/javascript.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border- gray-400 rounded-lg-cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/neatbenas.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border- gray-400 rounded-lg-cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/Canva.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border- gray-400 rounded-lg-cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- service -->
+    <div id="service" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg">What i offer</h4>
+        <h2 class="text-center text-5xl">My Services</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">"I’m a frontend developer based in Indonesia with a year of
+            hands-on experience turning ideas into responsive, user-focused websites. I enjoy crafting modern
+            interfaces, refining details that matter, and learning new tools to build better experiences."</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-10 gap-5">
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <h3 class="text-lg my-4 text-gray-700">Web design</h3>
+                <p class="text-sm text-gray-600 leading-5">Web development in the process of building programming...</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/arrow.png" alt=""
+                        class="w-4"></a>
+            </div>
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <h3 class="text-lg my-4 text-gray-700">UI/UX</h3>
+                <p class="text-sm text-gray-600 leading-5">Web development in the process of building programming...</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/arrow.png" alt=""
+                        class="w-4"></a>
+            </div>
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <h3 class="text-lg my-4 text-gray-700">System design</h3>
+                <p class="text-sm text-gray-600 leading-5">Web development in the process of building programming...</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/arrow.png" alt=""
+                        class="w-4"></a>
+            </div>
+            <div
+                class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <h3 class="text-lg my-4 text-gray-700">Business process</h3>
+                <p class="text-sm text-gray-600 leading-5">Web development in the process of building programming...</p>
+                <a href="" class="flex items-center gap-2 text-sm mt-5">Read more <img src="./images/arrow.png" alt=""
+                        class="w-4"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- my projects -->
+    <div>
+        <div id="my-project" class="w-full px-[12%] py-10 scroll-mt-20">
+            <h4 class="text-center mb-2 text-lg">My Portofolio</h4>
+            <h2 class="text-center text-5xl">My recent projects</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12">"Welcome to my web development portofolio! Explore a
+                collection of projects showcasing my expertise in front-end development."</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 my-10 gap-5">
+                <div
+                    class="aspect-square bg-[url('./images/ui.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                    <div
+                        class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                        <div>
+                            <h2 class="font semibold">Frontend project</h2>
+                            <p class="text-sm text-gray-700">Web Design</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="aspect-square bg-[url('./images/analis.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                    <div
+                        class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                        <div>
+                            <h2 class="font semibold"> Analysis Project</h2>
+                            <p class="text-sm text-gray-700">Web development</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="aspect-square bg-[url('./images/kom.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                    <div
+                        class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                        <div>
+                            <h2 class="font semibold"> API Project</h2>
+                            <p class="text-sm text-gray-700">CRUD System</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="aspect-square bg-[url('./images/cpu.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                    <div
+                        class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                        <div>
+                            <h2 class="font semibold">Software development</h2>
+                            <p class="text-sm text-gray-700">Payroll System</p>
+                        </div>
+                        <div
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <a href="#"
+                class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#7FFF00] duration-500">show
+                more <img src="./images/arrow.png" alt="" class="w-4"></a>
+
+            <!-- contact -->
+            <div id="contact"
+                class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('')] bg-no-repeat bg-[length:90%_auto] bg-center">
+                <h4 class="text-center mb-2 text-lg">Connect With Me</h4>
+                <h2 class="text-center text-5xl">Get in touch</h2>
+                <p class="text-center max-w-2xl mx-auto mt-5 mb-12">"I'd love to hear from you! If you have any
+                    question, comment or feedback, please use the form below."</p>
+            </div>
+
+            <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+
+                <input type="hidden" name="access_key" value="cdeaa208-81d8-44e5-a3c6-9c757013ad6e">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8">
+                    <input type="text" placeholder="Enter your name"
+                        class="w-full p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" required
+                        name="name">
+                    <input type="text" placeholder="Enter your email"
+                        class="w-full p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" required
+                        name="email">
+                </div>
+
+                <textarea rows="6" placeholder="Enter your message"
+                    class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6" required
+                    name="message"></textarea>
+
+                <button
+                    class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black text-white rounded-full mx-auto hover:bg-black duration-500">
+                    Submit
+                </button>
+            </form>
+
+
+            <!-- form -->
+            <div class="mt-20">
+                <div class="text center">
+                    <img src="./images/logo2.png" alt="" class="w-36 mx-auto mb-2">
+                    <div class="w-max flex items-center gap-2 mx-auto">
+                        <img src="./images/mail.jpg" alt="" class="w-6">
+                        andirahmatadiwinataa@gmail.com
+                    </div>
+                </div>
+            </div>
+            <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] my-12 py-6">
+                <p>© 2025 Rahmat. All Rights Reserved.</p>
+                <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                    <li><a href="https://instagram.com/rahmatstories">instagram</a></li>
+                    <li><a href="https://instagram.com/rahmatstories">Github</a></li>
+                    <li><a href="https://instagram.com/rahmatstories">LinkedIn</a></li>
+                </ul>
+            </div>
+
+
+            <script src="./script.js"></script>
+</body>
+
+</html>
